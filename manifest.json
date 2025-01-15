@@ -3,12 +3,12 @@
   "name": "Streamlit Hosted App",
   "icons": [
     {
-      "src": "/icon-192.png",
+      "src": "/1.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/icon-512.png",
+      "src": "/2.png",
       "sizes": "512x512",
       "type": "image/png"
     }
