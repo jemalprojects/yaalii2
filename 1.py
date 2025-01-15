@@ -5,10 +5,10 @@ st.title("Streamlit App with PWA Support")
 # Add manifest and register service worker
 st.markdown(
     """
-    <link rel="manifest" href="https://your-hosting-url/manifest.json">
+    <link rel="manifest" href="manifest.json">
     <script>
       if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('https://your-hosting-url/service-worker.js')
+        navigator.serviceWorker.register('service-worker.js')
         .then(function(registration) {
           console.log('Service Worker registered with scope:', registration.scope);
         })
