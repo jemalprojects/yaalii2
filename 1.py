@@ -5,10 +5,10 @@ st.title("Streamlit App with PWA Support")
 # Add manifest and register service worker
 st.markdown(
     """
-    <link rel="manifest" href="manifest.json">
+    <link rel="manifest" href="https://yaalii2.streamlit.app/manifest.json">
     <script>
       if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('service-worker.js')
+        navigator.serviceWorker.register('https://yaalii2.streamlit.app/service-worker.js')
         .then(function(registration) {
           console.log('Service Worker registered with scope:', registration.scope);
         })
