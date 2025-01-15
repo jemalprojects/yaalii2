@@ -20,3 +20,29 @@ st.markdown(
     """,
     unsafe_allow_html=True,
 )
+st.markdown(
+    """
+    <script>
+      if (/Mobi|Android|iPhone|iPad/i.test(navigator.userAgent)) {
+        // Listen for the install prompt
+        window.addEventListener('beforeinstallprompt', (e) => {
+          e.preventDefault(); // Prevent the default browser prompt
+          const installPromptEvent = e;
+
+          // Show a custom message
+          if (confirm("Do you want to install this app for a better experience?")) {
+            installPromptEvent.prompt(); // Show the install prompt
+            installPromptEvent.userChoice.then((choiceResult) => {
+              if (choiceResult.outcome === 'accepted') {
+                console.log('User accepted the install prompt');
+              } else {
+                console.log('User dismissed the install prompt');
+              }
+            });
+          }
+        });
+      }
+    </script>
+    """,
+    unsafe_allow_html=True,
+)
