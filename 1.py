@@ -30,10 +30,10 @@ st.title("Yaalii2 App with PWA Support")
 # Include the manifest and service worker
 st.markdown(
     """
-    <link rel="manifest" href="/manifest.json">
+    <link rel="manifest" href="manifest.json">
     <script>
       if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/service-worker.js')
+        navigator.serviceWorker.register('service-worker.js')
         .then(function(registration) {
           console.log('Service Worker registered with scope:', registration.scope);
         })
